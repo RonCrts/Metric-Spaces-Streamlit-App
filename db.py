@@ -55,13 +55,11 @@ def get_metric_spaces():
     session = Session()
 
     """
-    Returns a list of metric spaces saved in the database.
+    returns a dataframe with all the values of the metric spaces table.
 
     Parameters:
     None
-
-    Returns:
-    list: List of metric spaces saved in the database.
+    
     """
     metric_spaces = pd.read_sql_table('metric_spaces', engine)
     session.close()
